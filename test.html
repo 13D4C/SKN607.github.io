@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKN Eng-com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand"></a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="test.html">Home</a>
+          <a href="About.html">About</a>
+          <a href="ผลงาน.html">Workings</a>
+          <a href="Activity.html">Activity</a>
+          <a href="Eng-com.html">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="vedio/Comp 3.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="vedio/6.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="vedio/5.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="vedio/4.mp4.mov" autoplay muted loop></video>
+      <video class="video-slide" src="vedio/dip.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Coding<br><span>607</span></h1>
+        <p>ช่วยกูด้วยย กุเหนื่อยมากเลยเพื่อนๆ</p>
+        <a href="test.html">Click to Home </a>
+      </div>
+      <div class="content">
+        <h1>Graphic<br><span>607</span></h1>
+        <p>พี่น็อตเก่งจัง แต่คุยเยอะมาก</p>
+        <a href="ผลงาน.html">Click To Workings </a>
+      </div>
+      <div class="content">
+        <h1>Photo<br><span>607</span></h1>
+        <p>พี่นัทคุยกับเด็กเยอะมาก</p>
+        <a href="About.html">Click to About</a>
+      </div>
+      <div class="content">
+        <h1>Digital media<br><span>607</span></h1>
+        <p>พี่ดิ้ฟซ่าเกมเมอร์Z</p>
+        <a href="Activity.html">Click to Activity </a>
+      </div>
+      <div class="content">
+        <h1>กิจกรรมที่จัดโดย.<br><span>607</span></h1>
+        <p>HCEC จงเจริฐ</p>
+        <a href="Eng-com.html">Click to contact</a>
+      </div>
+      <div class="media-icons">
+        <a href="https://www.facebook.com/profile.php?id=100063639549798"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/spacefor_607/"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
+      
